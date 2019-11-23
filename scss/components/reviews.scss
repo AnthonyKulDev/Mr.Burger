@@ -15,19 +15,21 @@
   }
 
   &__info {
-    padding: 10px 40px 20px;
+    padding: 10px 30px 50px 20px;
     height: 100%;
     opacity: 0;
+    transition: opacity 0.4s ease-in;
 
     &:hover {
       opacity: 1;
+      background-color: rgba(black, 0.3);
     }
   }
 
   &__text {
     font-size: 14px;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 17px;
 
     & p {
       font-size: 14px;
@@ -38,9 +40,10 @@
   }
 
   &__name {
+    font-size: 14px;
     font-family: Gagalin;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
 
