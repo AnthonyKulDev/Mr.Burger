@@ -1,0 +1,19 @@
+.nav__list {
+  font-size: 13px;
+  font-weight: 300;
+  text-align: right;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__item {
+  margin-right: 10px;
+}
+
+.nav__item::before {
+  content: "•";
+  margin-right: 10px;
+}

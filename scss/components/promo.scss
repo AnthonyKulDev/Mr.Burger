@@ -1,0 +1,47 @@
+.promo,
+.promo__preview {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.promo {
+  flex-grow: 1;
+}
+
+.promo__image {
+  display: block;
+  position: relative;
+  width: 47%;
+  padding: 55px 0px 0px 35px;
+}
+
+.promo__image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background: url(/img/first-screen/drops.png) center center no-repeat;
+}
+
+.promo__title {
+  width: 53%;
+  padding-top: 205px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #f9b43b;
+  font-family: Gagalin;
+  font-size: 72px;
+  text-align: left;
+}
+
+.promo__subtitle {
+  color: #fff;
+  font-family: Lifehack;
+  font-size: 65px;
+}

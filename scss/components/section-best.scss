@@ -1,0 +1,14 @@
+.section-best {
+  background: url(/img/best/bg.png) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+
+  &__title {
+    font-size: 72px;
+    text-align: center;
+    font-family: Gagalin;
+    color: #2f3234;
+    margin-bottom: 50px;
+  }
+}
