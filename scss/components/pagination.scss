@@ -1,5 +1,8 @@
-// .pagination {
-// }
+.pagination {
+  position: fixed;
+  top: 81px;
+  right: 50px;
+}
 
 .pagination__list {
   display: flex;
@@ -16,7 +19,7 @@
   border-radius: 50%;
 }
 
-.pagination__item_active {
+.pagination__item--active {
   border: 1px solid #fff;
   border-radius: 50%;
 }
