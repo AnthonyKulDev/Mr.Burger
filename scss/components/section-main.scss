@@ -1,5 +1,5 @@
 .section-main {
-  background: url(/img/first-screen/video-bg.png) no-repeat center center fixed;
+  background: url(/img/first-screen/video-bg.png) no-repeat center center;
   background-size: cover;
   position: relative;
   width: 100%;
@@ -8,13 +8,14 @@
   flex-direction: column;
 }
 
-.section-main::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url(/img/first-screen/texture.png) center center no-repeat;
-  background-size: cover;
-}
+// .section-main::before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background: url(/img/first-screen/texture.png) center center no-repeat;
+//   background-size: cover;
+//   z-index: 0;
+// }

@@ -8,9 +8,9 @@
   }
 
   &__item {
+   
     width: 25%;
     height: 50%;
-    filter: grayscale(100%);
 
     @for $i from 1 to 9 {
 
@@ -23,16 +23,20 @@
   }
 
   &__info {
-    padding: 50px 30px 50px 20px;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
     transition: opacity 0.4s ease-in;
+    height: 100%;
+    width: 100%;
 
     &:hover {
       opacity: 1;
       background-color: rgba(black, 0.3);
     }
-    
+
   }
 
   &__text {
@@ -44,6 +48,7 @@
       line-height: 24px;
       font-family: Ubuntu;
       text-align: left;
+      max-width: 220px;
     }
 
   }
@@ -54,4 +59,7 @@
     margin-bottom: 30px;
   }
 
+  &__more {
+    margin-right: 112px;
+  }
 }

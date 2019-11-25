@@ -516,6 +516,7 @@ a {
   background: url(/img/first-screen/arrow-scroll.png) center center no-repeat;
   display: block;
   padding: 38px 0 38px;
+  cursor: pointer;
 }
 
 .pagination {
@@ -537,6 +538,7 @@ a {
   margin-bottom: 5px;
   border: 1px solid transparent;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .pagination__item--active {
@@ -556,24 +558,13 @@ a {
 }
 
 .section-main {
-  background: url(/img/first-screen/video-bg.png) no-repeat center center fixed;
+  background: url(/img/first-screen/video-bg.png) no-repeat center center;
   background-size: cover;
   position: relative;
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.section-main::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url(/img/first-screen/texture.png) center center no-repeat;
-  background-size: cover;
 }
 
 .section-best {
@@ -600,7 +591,6 @@ a {
 .reviews__item {
   width: 25%;
   height: 50%;
-  filter: grayscale(100%);
 }
 .reviews__item:nth-child(1) {
   background: url(/img/reviews/avatar_1.png) center center no-repeat;
@@ -635,10 +625,14 @@ a {
   background-size: cover;
 }
 .reviews__info {
-  padding: 50px 30px 50px 20px;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   transition: opacity 0.4s ease-in;
+  height: 100%;
+  width: 100%;
 }
 .reviews__info:hover {
   opacity: 1;
@@ -653,11 +647,15 @@ a {
   line-height: 24px;
   font-family: Ubuntu;
   text-align: left;
+  max-width: 220px;
 }
 .reviews__name {
   font-family: Gagalin;
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+.reviews__more {
+  margin-right: 112px;
 }
 
 .features {
@@ -727,6 +725,20 @@ a {
   text-align: center;
   color: #2f3234;
   margin-bottom: 50px;
+}
+
+.section-team {
+  background: url(/img/team/team_bg.png) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.team {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
