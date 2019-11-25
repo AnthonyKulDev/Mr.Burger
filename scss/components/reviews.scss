@@ -28,7 +28,7 @@
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.4s ease-in;
+    transition: opacity 0.4s ease;
     height: 100%;
     width: 100%;
 
@@ -59,7 +59,14 @@
     margin-bottom: 30px;
   }
 
-  &__more {
-    margin-right: 112px;
-  }
+}
+
+.reviews__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.reviews__button {
+  max-width: 110px;
 }
