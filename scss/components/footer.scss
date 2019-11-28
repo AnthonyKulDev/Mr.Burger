@@ -1,0 +1,12 @@
+.footer {
+  background: url("/img/contacts/footer_texture.png") center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  
+  &__info {
+    padding: 10px 0px;
+    display: flex;
+  }
+}

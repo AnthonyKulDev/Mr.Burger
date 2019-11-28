@@ -1,0 +1,30 @@
+.contacts {
+  width: 50%;
+  font-style: normal;
+  font-size: 14px;
+  font-family: Ubuntu;
+
+  &__address {
+    color: #fff;
+    margin-bottom: 24px;
+  }
+
+  &__phone {
+    color: #e45028;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      fill: #e45028;
+      margin-right: 10px;
+    }
+    // &::before {
+    //   content: '';
+    //   width: 12px;
+    //   height: 11px;
+    //   margin-right: 5px;
+    //   background: url(/img/contacts/phone.png) no-repeat center center;
+    // }
+  }
+}

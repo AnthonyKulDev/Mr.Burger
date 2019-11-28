@@ -1,0 +1,72 @@
+.accordeon {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 10px;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  &__item {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__title {
+    height: 100%;
+    font-family: Gagalin;
+    color: #fff;
+    font-size: 40px;
+
+    & span {
+      height: 100%;
+      font-family: Gagalin;
+      color: #fff;
+      font-size: 40px;
+      padding: 40px 20px 0;
+      text-transform: uppercase;
+      writing-mode: tb-rl;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__desc {
+    background-color: rgb(56, 60, 62, 0.8);
+    line-height: 24px;
+    font-size: 14px;
+    color: #fff;
+    font-family: Ubuntu;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+
+    & p {
+      padding-top: 60px;
+      margin: 0 auto;
+      max-width: 470px;
+    }
+  }
+}
+
+.accordeon__item--active .accordeon__desc {
+  width: 50vw;
+}
+
+.accordeon__item--active span {
+  color: #f9b43b;
+}
+
+@each $bg in (meat, veg, diet) {
+  .accordeon__title--#{$bg} {
+    background: url(/img/menu/#{$bg}.png) no-repeat center center;
+    background-size: cover;
+  }
+}

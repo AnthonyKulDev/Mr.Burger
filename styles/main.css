@@ -747,6 +747,10 @@ a {
   margin-bottom: 50px;
 }
 
+.title--section--menu {
+  color: #fff;
+}
+
 .section-team {
   background: url(/img/team/team_bg.png) no-repeat center center;
   background-size: cover;
@@ -842,6 +846,168 @@ a {
 
 .team__item--active .team__name {
   color: #f9b43b;
+}
+
+.accordeon {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.accordeon__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+}
+.accordeon__item {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.accordeon__title {
+  height: 100%;
+  font-family: Gagalin;
+  color: #fff;
+  font-size: 40px;
+}
+.accordeon__title span {
+  height: 100%;
+  font-family: Gagalin;
+  color: #fff;
+  font-size: 40px;
+  padding: 40px 20px 0;
+  text-transform: uppercase;
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+}
+.accordeon__desc {
+  background-color: rgba(56, 60, 62, 0.8);
+  line-height: 24px;
+  font-size: 14px;
+  color: #fff;
+  font-family: Ubuntu;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.accordeon__desc p {
+  padding-top: 60px;
+  margin: 0 auto;
+  max-width: 470px;
+}
+
+.accordeon__item--active .accordeon__desc {
+  width: 50vw;
+}
+
+.accordeon__item--active span {
+  color: #f9b43b;
+}
+
+.accordeon__title--meat {
+  background: url(/img/menu/meat.png) no-repeat center center;
+  background-size: cover;
+}
+
+.accordeon__title--veg {
+  background: url(/img/menu/veg.png) no-repeat center center;
+  background-size: cover;
+}
+
+.accordeon__title--diet {
+  background: url(/img/menu/diet.png) no-repeat center center;
+  background-size: cover;
+}
+
+.section-menu {
+  background: url(/img/menu/menu_bg.png) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu {
+  position: absolute;
+  top: 70px;
+  left: 50px;
+}
+
+.section-contacts {
+  background: url(/img/contacts/map.png) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.footer {
+  background: url("/img/contacts/footer_texture.png") center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.footer__info {
+  padding: 10px 0px;
+  display: flex;
+}
+
+.contacts {
+  width: 50%;
+  font-style: normal;
+  font-size: 14px;
+  font-family: Ubuntu;
+}
+.contacts__address {
+  color: #fff;
+  margin-bottom: 24px;
+}
+.contacts__phone {
+  color: #e45028;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.contacts__phone-icon {
+  fill: #e45028;
+  margin-right: 10px;
+}
+
+.socials {
+  width: 50%;
+}
+.socials__list {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.socials__item {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.socials__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.vk-icon, .fb-icon, .inst-icon, .tw-icon {
+  fill: #5a5a5a;
+}
+
+.socials svg:hover {
+  fill: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */
