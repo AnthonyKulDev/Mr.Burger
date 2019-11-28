@@ -1,0 +1,151 @@
+.form {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-family: Ubuntu;
+  font-weight: 300;
+  text-align: left;
+
+  &__col {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    flex: 1;
+    margin-right: 20px;
+    
+    &--checkbox {
+      flex: none;
+    }
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__label-title {
+    color: #fff;
+    margin-bottom: 7px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__input-text {
+    border: none;
+    border: 2px solid #d1cfcb;
+    border-radius: 5px;
+    outline: none;
+
+    &:focus {
+      border: 2px solid #f9b43b;
+    }
+
+    &--textarea {
+      height: 110px;
+      resize: vertical;
+    }
+  }
+
+  &__reset {
+    color: #fff;
+  }
+}
+
+.form input[type="text"],
+.form__input-text--textarea {
+  padding: 10px 25px;
+  width: 100%;
+}
+
+//Рисуем радио-баттоны
+
+.form__input-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form__input-radio:checked+.form__label-title:before,
+.form__input-radio:not(:checked)+.form__label-title:before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.form__input-radio:checked+.form__label-title:after,
+.form__input-radio:not(:checked)+.form__label-title:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  margin-left: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: #e35028;
+}
+
+.form__input-radio:checked+.form__label-title:after {
+  opacity: 1;
+}
+
+.form__input-radio:not(:checked)+.form__label-title:after {
+  opacity: 0;
+}
+
+//Рисуем чек-бокс
+
+.form__input-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form__input-checkbox:checked+.form__label-title:before,
+.form__input-checkbox:not(:checked)+.form__label-title:before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  margin-right: 10px;
+}
+
+.form__input-checkbox:checked+.form__label-title:after,
+.form__input-checkbox:not(:checked)+.form__label-title:after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 3px;
+  transform: rotate(-45deg);
+  border-left: 3px solid;
+  border-bottom: 3px solid;
+  margin-left: 2px;
+  border-color: #e35028;
+}
+
+.form__input-checkbox:checked+.form__label-title:after {
+  opacity: 1;
+}
+
+.form__input-checkbox:not(:checked)+.form__label-title:after {
+  opacity: 0;
+}
+
