@@ -1,11 +1,30 @@
 .header {
-  padding-top: 12px;
+  padding-top: rem(12px);
 
   &__content {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
   }
   
+  &__logo {
+    @include tablets {
+      width: 15%;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+
+  &__order {
+    display: inline-block;
+    vertical-align: middle;
+    padding: rem(9px) 0;
+    min-width: rem(85px);
+    margin-left: 2%;
+    // width: 15%;
+  }
 }

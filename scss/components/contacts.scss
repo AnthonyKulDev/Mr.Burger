@@ -1,29 +1,40 @@
 .contacts {
   width: 50%;
   font-style: normal;
-  font-size: 14px;
+  font-size: rem(14px);
   font-family: Ubuntu;
+  @include phones {
+    text-align: center;
+    width: 100%;
+    margin-bottom: rem(20px);
+  }
 
   &__address {
     color: #fff;
-    margin-bottom: 24px;
+    margin-bottom: rem(24px);
+    @include tablets {
+      margin-bottom: rem(5px);
+    }
+    @include phones {
+      margin-bottom: rem(10px);
+    }
   }
 
   &__phone {
     color: #e45028;
     font-weight: bold;
-    display: flex;
+    display: inline-flex;
     align-items: center;
 
     &-icon {
       fill: #e45028;
-      margin-right: 10px;
+      margin-right: rem(10px);
     }
     // &::before {
     //   content: '';
-    //   width: 12px;
-    //   height: 11px;
-    //   margin-right: 5px;
+    //   width: rem(12px);
+    //   height: rem(11px);
+    //   margin-right: rem(5px);
     //   background: url(/img/contacts/phone.png) no-repeat center center;
     // }
   }

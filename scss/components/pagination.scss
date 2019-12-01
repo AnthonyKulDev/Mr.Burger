@@ -1,7 +1,10 @@
 .pagination {
   position: fixed;
-  top: 81px;
-  right: 50px;
+  top: rem(81px);
+  right: rem(50px);
+  @include phones {
+    display: none;
+  }
 }
 
 .pagination__list {
@@ -11,27 +14,26 @@
 }
 
 .pagination__item {
-  width: 16px;
-  height: 16px;
+  width: rem(16px);
+  height: rem(16px);
   position: relative;
-  margin-bottom: 5px;
-  border: 1px solid transparent;
+  margin-bottom: rem(5px);
+  border: rem(1px) solid transparent;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .pagination__item--active {
-  border: 1px solid #fff;
-  border-radius: 50%;
+  border: rem(1px) solid #fff;
 }
 
 .pagination__item::after {
   content: "";
   position: absolute;
-  margin-left: 4px;
-  margin-top: 4px;
-  width: 6px;
-  height: 6px;
+  margin-left: rem(4px);
+  margin-top: rem(4px);
+  width: rem(6px);
+  height: rem(6px);
   border-radius: 100%;
   background-color: #fff;
 }

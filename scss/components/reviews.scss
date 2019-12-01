@@ -20,6 +20,11 @@
       }
 
     }
+
+    @include tablets {
+      width: 50%;
+      height: 25%;
+    }
   }
 
   &__info {
@@ -36,19 +41,30 @@
       opacity: 1;
       background-color: rgba(black, 0.3);
     }
-
+    
+    @include tablets {
+      text-align: center;
+      padding: 0 10%;
+    }
   }
 
   &__text {
-    font-size: 14px;
+    font-size: rem(14px);
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
+    
 
     & p {
-      line-height: 24px;
+      line-height: rem(24px);
       font-family: Ubuntu;
       text-align: left;
-      max-width: 220px;
+      max-width: rem(220px);
+      @include tablets {
+        text-align: center;
+      }
+      @include phones {
+      display: none;
+      }
     }
 
   }
@@ -56,7 +72,14 @@
   &__name {
     font-family: Gagalin;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
+    
+    @include tablets {
+      margin-bottom: rem(10px);
+    }
+    @include phones {
+      font-size: rem(27px);
+    }
   }
 
 }
@@ -67,6 +90,7 @@
   justify-content: flex-start;
 }
 
-.reviews__button {
-  max-width: 110px;
-}
+// .reviews__button {
+//   max-width: rem(110px);
+// }
+

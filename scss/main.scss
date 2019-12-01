@@ -1,23 +1,25 @@
 @import 'settings/fonts.scss';
 @import 'settings/normalize.scss';
+@import 'settings/media.scss';
 @import 'settings/base.scss';
 
 @import 'components/header.scss';
+@import 'components/section.scss';
 @import 'components/logo.scss';
 @import 'components/nav.scss';
 @import 'components/promo.scss';
-@import 'components/arrow-scroll.scss';
+@import 'components/down-arrow.scss';
 @import 'components/pagination.scss';
 @import 'components/section-main.scss';
-@import 'components/section-best.scss';
+@import 'components/best.scss';
 @import 'components/section-reviews.scss';
 @import 'components/reviews.scss';
 @import 'components/features.scss';
 @import 'components/btn.scss';
 @import 'components/title.scss';
-@import 'components/section-team.scss';
 @import 'components/team.scss';
-@import 'components/accordeon.scss';
+@import 'components/team.scss';
+@import 'components/menu-acco.scss';
 @import 'components/section-menu.scss';
 @import 'components/menu.scss';
 @import 'components/section-contacts.scss';
@@ -27,3 +29,4 @@
 @import 'components/section-order.scss';
 @import 'components/form.scss';
 @import 'components/order-wrap.scss';
+@import 'components/hamburger-menu-link.scss';

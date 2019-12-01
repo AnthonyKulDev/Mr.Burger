@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Главная страница</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+  <title>Mr. Burger</title>
   <link rel="stylesheet" href="styles/main.css">
   <link rel="shortcut icon" href="/img/first-screen/steam-282-29.png" type="image/png">
 </head>
@@ -14,10 +14,10 @@
   <div class="wrapper">
     <div class="main-content">
       <section class="section-main">
-        <header class="header">
-          <div class="container">
+        <div class="container">
+          <header class="header">
             <div class="header__content">
-              <a href="#" class="logo"></a>
+              <div class="header__logo"><a class="logo" href="#"><img class="logo__icon" src="./icons/logo.svg"></a></div>
               <nav class="nav">
                 <ul class="nav__list">
                   <li class="nav__item">
@@ -43,39 +43,37 @@
                   </li>
                 </ul>
               </nav>
-              <div class="btn">
-                <a href="#" class="header__order">Заказать</a>
+              <div class="header__links">
+                <a href="#" class="header__order btn">Заказать</a><a class="hamburger-menu-link" href=""><div class="hamburger-menu-link__bars"></div></a>
               </div>
             </div>
-          </div>
-        </header>
-        <div class="promo">
-          <div class="container">
+          </header>
+          <div class="promo__container">
             <div class="promo__preview">
-              <div class="promo__image">
-                <img src="/img/first-screen/steam-282-29.png" alt="burger" class="promo__image-preview">
+              <div class="promo__left">
+                <img src="/img/first-screen/steam-282-29.png" alt="burger" class="promo__image">
               </div>
-              <div class="promo__title">
-                <div class="title title--section--main">МЫ ДЕЛАЕМ</div>
+              <div class="promo__right">
+                <div class="title">МЫ ДЕЛАЕМ</div>
                 <div class="promo__subtitle">натуральные бургеры</div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="container">
-          <div class="arrow-scroll">
-            <img src="/img/first-screen/arrow-scroll.png" alt="" class="arrow-scroll__image">
-          </div>
-        </div>
+        </div><a class="down-arrow" href="#">
+          <svg class="down-arrow__icon">
+            <use xlink:href="./sprite.svg#arrow-scroll"></use>
+          </svg></a>
       </section>
-      <section class="section-best">
+      <section class="section best">
         <div class="container">
           <div class="title title--section--best">Мы лучшие</div>
           <div class="features">
             <ul class="features__list">
               <li class="features__item">
                 <div class="features__logo">
-                  <img src="/img/best/meat.png" alt="" class="features__logo-pic">
+                  <svg class="features__logo-pic" style="fill: #e25028" width="96.428px" height="89.246px" viewBox="0 0 96.428 89.246">
+                    <use xlink:href="./sprite.svg#meat"></use>
+                  </svg>
                 </div>
                 <div class="features__desc">
                   <div class="features__title">100% свежее мясо</div>
@@ -84,17 +82,25 @@
               </li>
               <li class="features__item">
                 <div class="features__logo">
-                  <img src="/img/best/hand.png" alt="" class="features__logo-pic">
+                  <svg class="features__logo-pic" style="fill: #f8b43a" width="73px" height="85.875px" viewBox="0 0 73 85.875">
+                    <use xlink:href="./sprite.svg#hand"></use>
+                  </svg>
                 </div>
-                <div class="features__title">Ручная сборка</div>
-                <div class="features__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                <div class="features__desc">
+                  <div class="features__title">Ручная сборка</div>
+                  <div class="features__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                </div>
               </li>
               <li class="features__item">
                 <div class="features__logo">
-                  <img src="/img/best/natural.png" alt="" class="features__logo-pic">
+                  <svg class="features__logo-pic" style="fill: #8ac03e" width="88px" height="75.534px" viewBox="0 0 88 75.534">
+                    <use xlink:href="./sprite.svg#natural"></use>
+                  </svg>
                 </div>
-                <div class="features__title">Натуральные ингридиенты</div>
-                <div class="features__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                <div class="features__desc">
+                  <div class="features__title">Натуральные ингридиенты</div>
+                  <div class="features__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                </div>
               </li>
             </ul>
           </div>
@@ -226,74 +232,68 @@
           </ul>
         </div>
       </section>
-      <section class="section-team">
-        <div class="team">
-          <div class="team__preview">
-            <div class="title title--section--team">Команда</div>
-            <div class="team__accordeon">
-              <ul class="team__list">
-                <li class="team__item">
-                  <div class="team__name">Даниэл Редклиф</div>
-                  <div class="team__item-desc">
-                    <div class="team__avatar">
-                      <img src="/img/team/avatar.png" alt="" class="team__pic">
-                    </div>
-                    <div class="team__personal-info">
-                      <div class="team__position">Оператор</div>
-                      <p>С радостью поможет выбрать идеальный бургер и оформить заказ</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="team__item team__item--active">
-                  <div class="team__name">Ричард Джеймс</div>
-                  <div class="team__item-desc">
-                    <div class="team__avatar">
-                      <img src="/img/team/avatar.png" alt="" class="team__pic">
-                    </div>
-                    <div class="team__personal-info">
-                      <div class="team__position">Оператор</div>
-                      <p>С радостью поможет выбрать идеальный бургер и оформить заказ</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="team__item">
-                  <div class="team__name">Джейк Финн</div>
-                  <div class="team__item-desc">
-                    <div class="team__avatar">
-                      <img src="/img/team/avatar.png" alt="" class="team__pic">
-                    </div>
-                    <div class="team__personal-info">
-                      <div class="team__position">Оператор</div>
-                      <p>С радостью поможет выбрать идеальный бургер и оформить заказ</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="team__item">
-                  <div class="team__name">Николай Иванов</div>
-                  <div class="team__item-desc">
-                    <div class="team__avatar">
-                      <img src="/img/team/avatar.png" alt="" class="team__pic">
-                    </div>
-                    <div class="team__personal-info">
-                      <div class="team__position">Оператор</div>
-                      <p>С радостью поможет выбрать идеальный бургер и оформить заказ</p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+      <section class="section team">
+        <div class="team__section">
+          <div class="title title--section--team">Команда</div>
+          <ul class="team__acco">
+            <li class="team__item">
+              <a href="#" class="team__name">Даниэл Редклиф</a>
+              <div class="team__item-desc">
+                <div class="team__avatar">
+                  <img src="/img/team/avatar.png" alt="" class="team__pic">
+                </div>
+                <div class="team__personal-info">
+                  <div class="team__position">Оператор</div>
+                  <div class="team__text-content">С радостью поможет выбрать идеальный бургер и оформить заказ</div>
+                </div>
+              </div>
+            </li>
+            <li class="team__item team__item--active">
+              <a href="#" class="team__name">Даниэл Редклиф</a>
+              <div class="team__item-desc">
+                <div class="team__avatar">
+                  <img src="/img/team/avatar.png" alt="" class="team__pic">
+                </div>
+                <div class="team__personal-info">
+                  <div class="team__position">Оператор</div>
+                  <div class="team__text-content">С радостью поможет выбрать идеальный бургер и оформить заказ</div>
+                </div>
+              </div>
+            </li>
+            <li class="team__item">
+              <a href="#" class="team__name">Даниэл Редклиф</a>
+              <div class="team__item-desc">
+                <div class="team__avatar">
+                  <img src="/img/team/avatar.png" alt="" class="team__pic">
+                </div>
+                <div class="team__personal-info">
+                  <div class="team__position">Оператор</div>
+                  <div class="team__text-content">С радостью поможет выбрать идеальный бургер и оформить заказ</div>
+                </div>
+              </div>
+            </li>
+            <li class="team__item">
+              <a href="#" class="team__name">Даниэл Редклиф</a>
+              <div class="team__item-desc">
+                <div class="team__avatar">
+                  <img src="/img/team/avatar.png" alt="" class="team__pic">
+                </div>
+                <div class="team__personal-info">
+                  <div class="team__position">Оператор</div>
+                  <p>С радостью поможет выбрать идеальный бургер и оформить заказ</p>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
-      <section class="section-menu">
-        <div class="menu">
-          <div class="title title--section--menu">Меню</div>
-        </div>
-        <div class="accordeon">
-          <ul class="accordeon__list">
-            <li class="accordeon__item accordeon__item--active">
-              <div class="accordeon__title accordeon__title--meat"><span>Для мясоедов</span></div>
-              <div class="accordeon__desc">
+      <section class="section menu">
+        <div class="title title--section--menu">Меню</div>
+        <div class="menu-acco">
+          <ul class="menu-acco__list">
+            <li class="menu-acco__item menu-acco__item--active">
+              <a class="menu-acco__title menu-acco__title--meat"><span>Для мясоедов</span></a>
+              <div class="menu-acco__desc">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate delectus quo ullam libero praesentium architecto dolores esse, natus odio, aspernatur aliquam, numquam nemo! Aliquam rerum itaque iure illo, incidunt adipisci.
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -301,15 +301,15 @@
                 </p>
               </div>
             </li>
-            <li class="accordeon__item">
-              <div class="accordeon__title accordeon__title--veg"><span>Для мясоедов</span></div>
-              <div class="accordeon__desc">
+            <li class="menu-acco__item">
+              <a class="menu-acco__title menu-acco__title--veg"><span>Для мясоедов</span></a>
+              <div class="menu-acco__desc">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate delectus quo ullam libero praesentium architecto dolores esse, natus odio, aspernatur aliquam, numquam nemo! Aliquam rerum itaque iure illo, incidunt adipisci.</p>
               </div>
             </li>
-            <li class="accordeon__item">
-              <div class="accordeon__title accordeon__title--diet"><span>Для мясоедов</span></div>
-              <div class="accordeon__desc">
+            <li class="menu-acco__item">
+              <a class="menu-acco__title menu-acco__title--diet"><span>Для мясоедов</span></a>
+              <div class="menu-acco__desc">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate delectus quo ullam libero praesentium architecto dolores esse, natus odio, aspernatur aliquam, numquam nemo! Aliquam rerum itaque iure illo, incidunt adipisci.</p>
               </div>
             </li>
@@ -324,7 +324,7 @@
               <div class="form__col">
                 <div class="form__row">
                   <label class="form__label">
-                    <div class="form__label-title">Ваше имя</div>
+                    <div class="form__label-title">Имя</div>
                     <input placeholder="" type="text" name="" class="form__input-text">
                   </label>
                   <label class="form__label">
@@ -377,7 +377,7 @@
                 <div class="form__row">
                   <label class="form__label">
                     <input placeholder="" type="checkbox" name="" class="form__input-checkbox" checked>
-                    <div class="form__label-title">Не перезванивать</div>
+                    <div class="form__checkbox-title">Не перезванивать</div>
                   </label>
                 </div>
                 <div class="form__row">
@@ -389,11 +389,6 @@
           </div>
         </div>
       </section>
-
-
-
-
-
       <section class="section-contacts">
         <footer class="footer">
           <div class="container">
@@ -438,9 +433,6 @@
           </div>
         </footer>
       </section>
-
-
-
       <div class="pagination">
         <ul class="pagination__list">
           <li class="pagination__item pagination__item--active"></li>

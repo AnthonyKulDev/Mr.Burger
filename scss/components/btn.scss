@@ -1,19 +1,19 @@
 .btn {
+  display: inline-block;
+  vertical-align: middle;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 13px;
-  border-radius: 5px;
+  font-size: rem(13px);
+  border-radius: rem(5px);
   background-color: #e45028;
   transition: background-color 0.3s ease;
+  padding: rem(10px) rem(20px);
   
   &:hover {
     background-color: #c1401e;
   }
-  & a {
-  padding: 10px 16px;
-  display: block;
-  }
+
 }
 
 .btn--color--grey {
@@ -25,6 +25,5 @@
 }
 
 .btn--submit {
-  padding: 10px 16px;
-  margin-right: 20px;
+  margin-right: rem(20px);
 }
