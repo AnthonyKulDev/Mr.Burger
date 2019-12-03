@@ -68,6 +68,9 @@
 
 .menu-acco__item--active .menu-acco__desc {
   width: 38vw;
+  @include phones {
+    width: 100%;
+  }
 }
 
 .menu-acco__item--active span {

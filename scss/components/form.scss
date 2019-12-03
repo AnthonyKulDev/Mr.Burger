@@ -11,6 +11,7 @@
     align-items: center;
     padding: 0 17%;
   }
+
   @include phones {
     padding: 0 1%;
   }
@@ -19,9 +20,11 @@
     width: 48%;
     display: flex;
     flex-direction: column;
+
     @include tablets {
       width: 100%;
     }
+
     @include phones {
       width: 100%;
     }
@@ -32,6 +35,7 @@
     justify-content: flex-start;
     align-items: center;
     margin-bottom: rem(20px);
+
     @include phones {
       justify-content: center;
     }
@@ -50,7 +54,8 @@
     }
   }
 
-  &__label-title, &__checkbox-title {
+  &__label-title,
+  &__checkbox-title {
     color: #fff;
     margin-bottom: rem(7px);
     display: flex;
@@ -77,6 +82,7 @@
 
   &__checkbox-title {
     position: relative;
+
     @include phones {
       justify-content: center;
     }
@@ -143,39 +149,88 @@
   opacity: 0;
 }
 
-.form__input-checkbox:checked+.form__checkbox-title:before,
-.form__input-checkbox:not(:checked)+.form__checkbox-title:before {
-  content: '';
-  display: inline-block;
-  width: rem(15px);
-  height: rem(15px);
-  background-color: #fff;
-  margin-right: rem(10px);
+// .form__input-checkbox:checked+.form__checkbox-title:before,
+// .form__input-checkbox:not(:checked)+.form__checkbox-title:before {
+//   content: '';
+//   display: inline-block;
+//   width: rem(15px);
+//   height: rem(15px);
+//   background-color: #fff;
+//   margin-right: rem(10px);
+// }
+
+// .form__input-checkbox:checked+.form__checkbox-title:after,
+// .form__input-checkbox:not(:checked)+.form__checkbox-title:after {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   width: rem(7px);
+//   height: rem(3px);
+//   transform: rotate(-45deg);
+//   border-left: rem(3px) solid;
+//   border-bottom: rem(3px) solid;
+//   top: rem(3px);
+//   left: rem(2px);
+//   border-color: #e35028;
+
+//   @include phones {
+//     left: rem(171px);
+//     top: rem(4px);
+//   }
+// }
+
+// .form__input-checkbox:checked+.form__checkbox-title:after {
+//   opacity: 1;
+// }
+
+// .form__input-checkbox:not(:checked)+.form__checkbox-title:after {
+//   opacity: 0;
+// }
+
+.form__checkbox {
+  position: relative;
+  white-space: nowrap;
+  margin-right: rem(20px);
+  display: inline-flex;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
-.form__input-checkbox:checked+.form__checkbox-title:after,
-.form__input-checkbox:not(:checked)+.form__checkbox-title:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: rem(7px);
-  height: rem(3px);
-  transform: rotate(-45deg);
-  border-left: rem(3px) solid;
-  border-bottom: rem(3px) solid;
-  top: rem(3px);
-  left: rem(2px);
-  border-color: #e35028;
-  @include phones {
-    left: rem(171px);
-    top: rem(4px);
+.form__checkbox {
+  .form__input-checkbox {
+    &+.form__checkbox-fake {
+      &:after {
+        background: transparent;
+      }
+    }
   }
 }
 
-.form__input-checkbox:checked+.form__checkbox-title:after {
-  opacity: 1;
+.form__checkbox-fake {
+  width: rem(16px);
+  height: rem(16px);
+  background: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin-right: rem(10px);
+
 }
 
-.form__input-checkbox:not(:checked)+.form__checkbox-title:after {
-  opacity: 0;
+.form__input-checkbox:checked {
+  &+.form__checkbox-fake {
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: rem(7px);
+      height: rem(3px);
+      transform: rotate(-45deg);
+      border-left: rem(3px) solid;
+      border-bottom: rem(3px) solid;
+      top: rem(4px);
+      left: rem(3px);
+      border-color: #e35028;
+    }
+  }
 }

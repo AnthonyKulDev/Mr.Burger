@@ -1,15 +1,11 @@
 .socials {
-  width: 50%;
+  
 
   &__list {
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
-    @include phones {
-      justify-content: center;
-    }
   }
 
   &__item {

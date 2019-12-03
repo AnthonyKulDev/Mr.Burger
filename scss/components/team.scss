@@ -27,7 +27,7 @@
     bottom: 0;
     left: 50%;
     background: rgba(#2f3234, .93);
-    padding: 15% 2% 0 9%;
+    padding: 15% 18% 0 9%;
 
     @include tablets {
       position: relative;
@@ -108,12 +108,16 @@
 
   &__avatar {
     text-align: center;
-    width: 30%;
+    // width: 30%;
+    padding-left: rem(20px);
+    margin-right: rem(20px);
 
     @include tablets {
+      padding-left: 0;
       margin-bottom: rem(15px);
     }
     @include phones {
+      padding-left: 0;
       margin-bottom: rem(15px);
     }
   }

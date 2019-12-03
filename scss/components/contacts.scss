@@ -1,8 +1,8 @@
 .contacts {
-  width: 50%;
   font-style: normal;
   font-size: rem(14px);
   font-family: Ubuntu;
+  display: inline-block;
   @include phones {
     text-align: center;
     width: 100%;
@@ -11,10 +11,7 @@
 
   &__address {
     color: #fff;
-    margin-bottom: rem(24px);
-    @include tablets {
-      margin-bottom: rem(5px);
-    }
+    margin-bottom: rem(10px);
     @include phones {
       margin-bottom: rem(10px);
     }

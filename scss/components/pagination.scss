@@ -2,6 +2,9 @@
   position: fixed;
   top: rem(81px);
   right: rem(50px);
+  @include tablets {
+    display: none;
+  }
   @include phones {
     display: none;
   }
