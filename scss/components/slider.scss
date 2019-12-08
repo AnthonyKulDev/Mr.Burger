@@ -1,0 +1,259 @@
+.slider {
+  width: 100%;
+  background-image: linear-gradient(to top, #f9b43b, #eb8c38, #f9b43b);
+
+  &-container {
+    flex-direction: row;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include tablets {
+      flex-direction: column;
+    }
+  }
+}
+
+.slider-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // overflow: hidden;
+}
+
+// .slider__items {
+//   display: flex;
+//   position: relative;
+//   will-change: right;
+//   transition: right 0.3s;
+// }
+
+.slider__previous,
+.slider__next {
+  display: flex;
+  align-items: center;
+}
+
+.slider__next-pic {
+  transform: rotate(-90deg);
+}
+
+.slider__previous-pic {
+  transform: rotate(90deg);
+}
+
+.slider__burger {
+
+  // background: url(../../img/slider/black_burger.png) center center no-repeat;
+  // background-size: contain;
+  // height: 100%;
+  @include tablets {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.slider__comp {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e35028;
+  opacity: 0.4;
+  border-radius: 5px;
+  top: rem(-70px);
+  left: rem(30px);
+  box-sizing: content-box;
+  padding: 2% 3.5% 2%; ////////СДЕЛАТЬ ПИКСЕЛАМИ
+  transition: opacity .3s;
+
+  // @include tablets {
+  //   top: rem(-73px);
+  // }
+
+  @include phones {
+    left: rem(-30px);
+  }
+
+  &:hover {
+    opacity: 1;
+
+    .slider__comp-hover {
+      opacity: 1;
+      display: block;
+    }
+  }
+}
+
+.slider__comp-text {
+  font-family: Gagalin;
+  font-size: rem(14px);
+  color: #fff;
+  text-align: center;
+}
+
+.slider__comp-hover {
+  position: absolute;
+  display: none;
+  opacity: 0;
+  left: 100%;
+  top: 0;
+  background-color: #fff;
+  font-size: rem(14px);
+  border-radius: 5px;
+  width: rem(270px);
+  transition: opacity .3s;
+}
+
+.slider__comp-logo {
+  height: rem(45px);
+  width: 22%;
+  margin-right: rem(20px);
+}
+
+.slider__comp-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.slider__list {
+  display: flex;
+  flex-direction: column;
+  padding: 3% 7%;
+}
+
+.slider__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(20px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.slider__item-text {
+  font-weight: bold;
+  text-align: left;
+  margin-right: auto;
+}
+
+.slider__kkal {
+  position: absolute;
+  width: rem(60px);
+  height: rem(60px);
+  bottom: rem(-50px);
+  left: rem(30px);
+  opacity: 0.4;
+
+  @include tablets {
+    top: rem(-65px);
+    right: rem(20px);
+    left: unset;
+  }
+
+  @include phones {
+    top: rem(-60px);
+    right: rem(-20px);
+    left: unset;
+  }
+
+  & span {
+    position: absolute;
+    text-align: center;
+    font-family: Gagalin;
+    color: #fff;
+  }
+
+  &-number {
+    font-size: rem(20px);
+    top: 44%;
+    left: 23%;
+
+    @include phones {
+      top: 51%;
+      left: 31%;
+    }
+  }
+
+  &-text {
+    font-size: rem(14px);
+    top: 110%;
+    left: 27%;
+  }
+}
+
+.slider__left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 45%;
+
+  @include tablets {
+    align-items: flex-end;
+    height: 42%;
+  }
+
+  @include phones {
+    height: 37%;
+  }
+}
+
+.slider__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+
+  @include tablets {
+    padding: 0 9%;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.slider__desc {
+  line-height: rem(24px);
+  font-size: rem(14px);
+  text-align-last: left;
+  font-weight: normal;
+  margin-bottom: rem(36px);
+}
+
+.slider__order {
+  display: flex;
+  align-items: center;
+}
+
+.slider__price {
+  font-family: Gagalin;
+  font-size: rem(30px);
+  color: #e35028;
+  font-weight: normal;
+  margin-right: rem(30px);
+
+  @include phones {
+    font-size: rem(24px);
+  }
+
+  & span {
+    font-size: rem(72px);
+
+    @include phones {
+      font-size: rem(50px);
+    }
+  }
+}
+
+.slider__link {
+  align-self: flex-end;
+}

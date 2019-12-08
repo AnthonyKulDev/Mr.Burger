@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="" id="container">
+  </div>
+  <script>
+    //Задание 1
+
+    const div1 = document.createElement('div');
+    const container = document.querySelector('#container');
+
+    container.appendChild(div1);
+    div1.textContent = 'Этот элемент создан при помощи DOM API';
+
+    //Задание 2
+
+    const div2 = document.createElement('div');
+
+    div2.classList.add('inner');
+    div1.appendChild(div2);
+    div2.textContent = 'Этот элемент тоже создан при помощи DOM API';
+
+    //Задание 3
+
+    div2.style.color = 'red';
+
+    //Задание 4
+
+    div1.addEventListener('click', function () {
+      console.log('Этот текст говорит о том, что я всё сделал правильно');
+    });
+
+    //Задание 5
+
+    const link = document.createElement('a');
+
+    link.textContent = 'Ссылка';
+    link.href = 'https://loftschool.com';
+    div1.appendChild(link);
+    link.addEventListener('click', function () {
+      console.log('Я кликнул на ссылку ' + link.href);
+      event.preventDefault();
+    });
+
+    //Задание 6
+
+    const text = document.createElement('input');
+    const button = document.createElement('button');
+
+    div1.appendChild(text);
+    div1.appendChild(button);
+    button.textContent = 'Push me!';
+
+    button.addEventListener('click', function() {
+      console.log(text.value);
+    });  
+
+  </script>
+</body>
+
+</html>

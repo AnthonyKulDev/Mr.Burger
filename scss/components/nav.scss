@@ -2,6 +2,40 @@
   @include tablets {
     display: none;
   }
+
+  &_hamburger {
+    width: 100%;
+
+    .nav__list,
+    .nav__item,
+    .nav__link {
+      flex-direction: column;
+    }
+
+    .nav__link {
+      text-align: center;
+      font-size: rem(24px);
+    }
+
+    .nav__item,
+    .nav__item:not(:first-child)::before {
+      margin-right: 0;
+      margin-bottom: rem(30px);
+    }
+
+    .nav__item {
+      margin-bottom: rem(30px);
+    }
+
+    .nav__item:not(:first-child)::before {
+      width: rem(7px);
+      height: rem(7px);
+    }
+
+    @include tablets {
+      display: flex;
+    }
+  }
 }
 
 .nav__list {
@@ -20,6 +54,7 @@
   margin-right: rem(16px);
   display: flex;
   align-items: center;
+
   &:last-child {
     margin-right: 0;
   }
