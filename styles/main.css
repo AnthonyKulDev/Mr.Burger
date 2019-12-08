@@ -496,6 +496,8 @@ a {
       padding: 50% 3% 0; } }
 
 .promo__container {
+  position: absolute;
+  top: 120%;
   display: flex;
   flex: 1;
   flex-direction: column;

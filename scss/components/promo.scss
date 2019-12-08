@@ -15,6 +15,8 @@
 }
 
 .promo__container {
+  position: absolute;
+  top: 120%;
   display: flex;
   flex: 1;
   flex-direction: column;
