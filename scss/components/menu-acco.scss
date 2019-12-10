@@ -68,6 +68,7 @@
 
 .menu-acco__item--active .menu-acco__desc {
   width: 38vw;
+  transition: width 0.4s ease;
   @include phones {
     width: 100%;
   }

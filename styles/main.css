@@ -915,8 +915,9 @@ a {
   .team__item-desc {
     display: flex;
     flex-direction: row;
-    height: 0rem;
-    overflow: hidden; }
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease; }
     @media screen and (max-width: 768px) {
       .team__item-desc {
         flex-direction: column;
@@ -956,7 +957,7 @@ a {
     font-weight: bold; }
 
 .team__item--active .team__item-desc {
-  height: 100%;
+  height: 6.25rem;
   margin-bottom: 2.375rem; }
 
 .team__item--active .team__name::before {
@@ -1036,8 +1037,9 @@ a {
   .team__item-desc {
     display: flex;
     flex-direction: row;
-    height: 0rem;
-    overflow: hidden; }
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease; }
     @media screen and (max-width: 768px) {
       .team__item-desc {
         flex-direction: column;
@@ -1077,7 +1079,7 @@ a {
     font-weight: bold; }
 
 .team__item--active .team__item-desc {
-  height: 100%;
+  height: 6.25rem;
   margin-bottom: 2.375rem; }
 
 .team__item--active .team__name::before {
@@ -1140,7 +1142,8 @@ a {
           padding: 1.5625rem 0.9375rem; } }
 
 .menu-acco__item--active .menu-acco__desc {
-  width: 38vw; }
+  width: 38vw;
+  transition: width 0.4s ease; }
   @media screen and (max-width: 480px) {
     .menu-acco__item--active .menu-acco__desc {
       width: 100%; } }
@@ -1480,7 +1483,8 @@ a {
   .slider__info {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    flex: 0 0 100%; }
     @media screen and (max-width: 768px) {
       .slider__info {
         flex-direction: column; } }
@@ -1488,7 +1492,15 @@ a {
 .slider-content {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  overflow: hidden; }
+
+.slider__items {
+  display: flex;
+  position: relative;
+  will-change: right;
+  transition: right 0.3s;
+  width: 100%; }
 
 .slider__previous,
 .slider__next {
@@ -1518,7 +1530,7 @@ a {
   background-color: #e35028;
   opacity: 0.4;
   border-radius: 5px;
-  top: -4.375rem;
+  top: -8.125rem;
   left: 1.875rem;
   box-sizing: content-box;
   padding: 2% 3.5% 2%;
@@ -1580,7 +1592,7 @@ a {
   position: absolute;
   width: 3.75rem;
   height: 3.75rem;
-  bottom: -3.125rem;
+  bottom: -6.875rem;
   left: 1.875rem;
   opacity: 0.4; }
   @media screen and (max-width: 768px) {

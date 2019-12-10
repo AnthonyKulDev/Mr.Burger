@@ -100,8 +100,10 @@
   &__item-desc {
     display: flex;
     flex-direction: row;
-    height: rem(0px);
+    height: 0;
     overflow: hidden;
+    transition: height 0.4s ease;
+    
 
     @include tablets {
       flex-direction: column;
@@ -156,7 +158,7 @@
 }
 
 .team__item--active .team__item-desc {
-  height: 100%;
+  height: rem(100px);
   margin-bottom: rem(38px);
 }
 
