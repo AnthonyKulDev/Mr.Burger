@@ -24,14 +24,13 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     right: 0;
     top: 0;
     bottom: 0;
     left: 50%;
     background: rgba(#2f3234, .93);
-    padding: 0 18% 0 9%;
+    padding: 0 10% 0 9%;
 
     @include tablets {
       position: relative;
@@ -121,6 +120,7 @@
     @include tablets {
       padding-left: 0;
       margin-bottom: rem(15px);
+      margin-right: 0;
     }
     @include phones {
       padding-left: 0;
@@ -160,6 +160,13 @@
 .team__item--active .team__item-desc {
   height: rem(100px);
   margin-bottom: rem(38px);
+
+  @include tablets {
+    height: rem(190px);
+  }
+  @include phones {
+    height: rem(200px);
+  }
 }
 
 .team__item--active .team__name::before {

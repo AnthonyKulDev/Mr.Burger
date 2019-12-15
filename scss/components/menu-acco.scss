@@ -55,6 +55,7 @@
     width: 0;
     height: 100%;
     overflow: hidden;
+    transition: width 0.4s ease;
 
     & p {
       padding: rem(60px) rem(30px);

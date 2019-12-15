@@ -31,6 +31,7 @@
   will-change: right;
   transition: right 0.3s;
   width: 100%;
+  right: 0px;
 }
 
 .slider__previous,
@@ -83,7 +84,7 @@
   // }
 
   @include phones {
-    left: rem(-30px);
+    left: 0;
   }
 
   &:hover {
@@ -164,8 +165,8 @@
   }
 
   @include phones {
-    top: rem(-60px);
-    right: rem(-20px);
+    top: rem(-130px);
+    right: rem(8px);
     left: unset;
   }
 
