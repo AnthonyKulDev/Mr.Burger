@@ -31,7 +31,7 @@
   will-change: right;
   transition: right 0.3s;
   width: 100%;
-  right: 0px;
+  right: 0;
 }
 
 .slider__previous,
@@ -79,12 +79,14 @@
   padding: 2% 3.5% 2%; ////////СДЕЛАТЬ ПИКСЕЛАМИ
   transition: opacity .3s;
 
-  // @include tablets {
-  //   top: rem(-73px);
-  // }
+  @include tablets {
+    top: rem(-73px);
+    left: 0;
+  }
 
   @include phones {
     left: 0;
+    top: rem(-130px);
   }
 
   &:hover {

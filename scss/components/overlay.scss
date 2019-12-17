@@ -11,17 +11,16 @@
   z-index: 10000;
 }
 
-.container {
-  position: relative;
-}
 
 .overlay__content {
+  position: relative;
   background: #fff;
   border-radius: rem(5px);
   padding: rem(30px) rem(20px);
   color: black;
   font-size: rem(16px);
   margin: 0;
+  max-width: rem(470px);
 }
 
 .overlay__close {
