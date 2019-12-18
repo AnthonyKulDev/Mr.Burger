@@ -147,3 +147,49 @@ formPopup.addEventListener("click", function(e) {
     closeFormPopup.click();
   }
 });
+
+//OnePageScroll
+
+onepagescroll('#main');
+
+onepagescroll('#main',{
+
+  //child elements selector. use if you don't want to use section for page.
+  pageContainer: 'section',     
+
+  //determine css3 animation that will run when page changes
+  //ex) 'ease', 'ease-out-in', 'cubic-bezier(0.2, 0.75, 0.5, 1.15)'
+  animationType: 'ease-in-out', 
+
+  //define how long each page takes to animate, 0 for off
+  animationTime: 500,        
+
+  //back to the last/first page when you scroll at first/last page   
+  infinite: true,           
+
+  //set show or hide pagination element.    
+  pagination: true,             
+
+  //allow up/page-up and down/page-down key for page scroll
+  keyboard: false,           
+
+  //determine direction of page scroll. options available are 'vertical' and 'horizontal'    
+  direction: 'vertical'        
+   
+});
+
+
+/* click event for pagination */
+var opsNavItem = document.querySelectorAll('li.ops-navigation__item');
+opsNavItem.forEach(function(element, i) {
+  i = i - 7;
+  element.addEventListener ('click', function() {
+    console.log(i);
+    // var clickedItemIndex = event.target;
+    // var clickedItemIndex = clickedItem.index;
+    // var main = document.querySelector('#main');
+    main.style.transform = 'translate3d(0,' + -(i-1)*100 + '%,0)';
+    document.querySelector('a.active[data-targetindex]').classList.remove('active');
+		document.querySelector('a[data-targetindex="' + i +'"]').classList.add('active');
+  });
+});

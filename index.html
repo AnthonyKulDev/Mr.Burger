@@ -7,13 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
   <title>Mr. Burger</title>
   <link rel="stylesheet" href="styles/main.css">
+  <!-- <link href="scss/components/onepagescroll.scss" rel="stylesheet"> -->
   <link rel="shortcut icon" href="/img/first-screen/steam-282-29.png" type="image/png">
 </head>
 
 <body>
   <div class="wrapper">
-    <div class="main-content">
-      <section class="section-main">
+    <div class="main-content" id="main">
+      <section class="section promo">
         <div class="container">
           <header class="header">
             <div class="header__content">
@@ -336,7 +337,7 @@
           </a>
         </div>
       </section>
-      <section class="section-reviews">
+      <section class="section reviews">
         <div class="reviews">
           <ul class="reviews__list">
             <li class="reviews__item">
@@ -579,7 +580,7 @@
           </ul>
         </div>
       </section>
-      <section class="section-order">
+      <section class="section order">
         <div class="order-wrap">
           <div class="container">
             <div class="title title--section--order">Закажите доставку</div>
@@ -659,15 +660,15 @@
           </div>  
         </div>
       </section>
-      <section class="section-contacts">
+      <section class="section contacts">
         <footer class="footer">
           <div class="container">
             <div class="footer__info">
-              <div class="footer__contacts">
-                <address class="contacts">
-                  <div class="contacts__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
-                  <div class="contacts__phone">
-                    <svg class="contacts__phone-icon" width="11px" height="11px" viewBox="0 0 11 11">
+              <div class="footer__address">
+                <address class="address">
+                  <div class="address__info">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+                  <div class="address__phone">
+                    <svg class="address__phone-icon" width="11px" height="11px" viewBox="0 0 11 11">
                       <use xlink:href="./sprite.svg#phone"></use>
                     </svg>+7 (812) 377-13
                   </div>
@@ -707,7 +708,7 @@
           </div>
         </footer>
       </section>
-      <div class="pagination">
+      <!-- <div class="pagination">
         <ul class="pagination__list">
           <li class="pagination__item pagination__item--active"></li>
           <li class="pagination__item"></li>
@@ -719,7 +720,7 @@
           <li class="pagination__item"></li>
           <li class="pagination__item"></li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </div>
   <div class="hamburger-menu" id="hamburger-menu">
@@ -744,6 +745,8 @@
     </div><a class="hamburger-menu__close" href="#">
       <svg class="hamburger-menu__close-icon"><use xlink:href="/sprite.svg#close"></use></svg></a>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="onepagescroll.js"></script>
   <script src="./main.js"></script>
 </body>
 
