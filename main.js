@@ -150,46 +150,68 @@ formPopup.addEventListener("click", function(e) {
 
 //OnePageScroll
 
-onepagescroll('#main');
-
-onepagescroll('#main',{
-
-  //child elements selector. use if you don't want to use section for page.
-  pageContainer: 'section',     
-
-  //determine css3 animation that will run when page changes
-  //ex) 'ease', 'ease-out-in', 'cubic-bezier(0.2, 0.75, 0.5, 1.15)'
-  animationType: 'ease-in-out', 
-
-  //define how long each page takes to animate, 0 for off
-  animationTime: 500,        
-
-  //back to the last/first page when you scroll at first/last page   
-  infinite: true,           
-
-  //set show or hide pagination element.    
-  pagination: true,             
-
-  //allow up/page-up and down/page-down key for page scroll
-  keyboard: false,           
-
-  //determine direction of page scroll. options available are 'vertical' and 'horizontal'    
-  direction: 'vertical'        
-   
+new fullpage('#fullpage', {
+	//options here
+	autoScrolling:true,
+	navigation: true,
+	scrollHorizontally: true
+	
 });
 
-
-/* click event for pagination */
-var opsNavItem = document.querySelectorAll('li.ops-navigation__item');
-opsNavItem.forEach(function(element, i) {
-  i = i - 7;
-  element.addEventListener ('click', function() {
-    console.log(i);
-    // var clickedItemIndex = event.target;
-    // var clickedItemIndex = clickedItem.index;
-    // var main = document.querySelector('#main');
-    main.style.transform = 'translate3d(0,' + -(i-1)*100 + '%,0)';
-    document.querySelector('a.active[data-targetindex]').classList.remove('active');
-		document.querySelector('a[data-targetindex="' + i +'"]').classList.add('active');
-  });
-});
+//Map
+var marks = [
+	[55.76044161638499, 37.64023603439329],
+	[55.760078644376165, 37.63412059783933],
+	[55.75659394045875, 37.642038478851305],
+	[55.763236387210114, 37.63716758728025]
+];
+// Функция ymaps.ready() будет вызвана, когда
+		// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init(){
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [55.76, 37.64],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 7
+				});
+				var clusterer = new ymaps.Clusterer();
+				myMap.geoObjects.add(clusterer);
+		
+				myMap.events.add('click', function (e) {
+						// Получение координат щелчка
+						var coords = e.get('coords');
+						console.log(coords);
+		
+						createPlacemark(coords)
+				});
+		
+				function createPlacemark(coords) {
+						var myPlacemark = new ymaps.Placemark(coords, {
+								hintContent: 'Собственный значок метки',
+								balloonContent: coords
+						}, {
+								// Опции.
+								// Необходимо указать данный тип макета.
+								iconLayout: 'default#image',
+								// Своё изображение иконки метки.
+								iconImageHref: './icons/map-marker.svg',
+								// Размеры метки.
+								iconImageSize: [46, 57],
+								// Смещение левого верхнего угла иконки относительно
+								// её "ножки" (точки привязки).
+								iconImageOffset: [-23, -70]
+						});
+		
+						clusterer.add(myPlacemark);
+				}
+		
+				marks.forEach(function (coords) {
+						createPlacemark(coords);
+				});
+		}

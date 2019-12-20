@@ -7,13 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
   <title>Mr. Burger</title>
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" type="text/css" href="fullpage.css" />
   <!-- <link href="scss/components/onepagescroll.scss" rel="stylesheet"> -->
   <link rel="shortcut icon" href="/img/first-screen/steam-282-29.png" type="image/png">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=87bff9c4-86db-4a74-9e72-2e7a485db4f3&lang=ru_RU" type="text/javascript">
+  </script>
 </head>
 
 <body>
   <div class="wrapper">
-    <div class="main-content" id="main">
+    <div class="main-content" id="fullpage">
       <section class="section promo">
         <div class="container">
           <header class="header">
@@ -661,6 +664,7 @@
         </div>
       </section>
       <section class="section contacts">
+        <div class="map" id="map"></div>
         <footer class="footer">
           <div class="container">
             <div class="footer__info">
@@ -746,7 +750,8 @@
       <svg class="hamburger-menu__close-icon"><use xlink:href="/sprite.svg#close"></use></svg></a>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="onepagescroll.js"></script>
+  <script type="text/javascript" src="./fullpage.js"></script>
+  <!-- <script src="onepagescroll.js"></script> -->
   <script src="./main.js"></script>
 </body>
 
