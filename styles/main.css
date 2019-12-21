@@ -406,7 +406,7 @@ a {
     margin-left: 2%; }
 
 .section {
-  height: 100vh !important;
+  height: 100vh;
   min-height: 40.625rem;
   position: relative;
   display: flex;
@@ -494,8 +494,7 @@ a {
   align-items: center; }
 
 .promo__preview {
-  display: flex;
-  padding: 15% 0 0; }
+  display: flex; }
   @media screen and (max-width: 768px) {
     .promo__preview {
       flex-direction: column;
@@ -507,7 +506,8 @@ a {
 
 .promo__container {
   position: absolute;
-  top: 120%;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   flex: 1;
   flex-direction: column;
