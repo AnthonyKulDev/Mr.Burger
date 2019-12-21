@@ -406,11 +406,14 @@ a {
     margin-left: 2%; }
 
 .section {
-  height: 100vh !important;
+  height: 100vh;
+  min-height: 40.625rem;
   position: relative;
-  display: flex; }
+  display: flex;
+  overflow: hidden; }
   @media screen and (max-width: 768px) {
     .section {
+      min-height: initial;
       height: 100vh; } }
 
 .logo {
@@ -498,8 +501,7 @@ a {
       padding: 0; } }
   @media screen and (max-width: 480px) {
     .promo__preview {
-      flex-direction: column;
-      padding: 50% 3% 0; } }
+      flex-direction: column; } }
 
 .promo__container {
   position: absolute;
@@ -509,9 +511,6 @@ a {
   flex: 1;
   flex-direction: column;
   justify-content: center; }
-  @media screen and (max-width: 768px) {
-    .promo__container {
-      padding-top: 0; } }
 
 .promo__left,
 .promo__right {
