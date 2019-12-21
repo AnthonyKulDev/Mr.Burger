@@ -1,12 +1,12 @@
 .section {
-	height: 100vh; 
-	min-height: rem(650px);
+	height: 100vh !important; 
+	// min-height: rem(650px);
 	position: relative;
   display: flex;
-  overflow: hidden;
+  // overflow: hidden;
   
 	@include tablets {
-		min-height: initial;
+		// min-height: initial;
     height: 100vh;
 	}
 }

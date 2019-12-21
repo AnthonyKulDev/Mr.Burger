@@ -406,14 +406,11 @@ a {
     margin-left: 2%; }
 
 .section {
-  height: 100vh;
-  min-height: 40.625rem;
+  height: 100vh !important;
   position: relative;
-  display: flex;
-  overflow: hidden; }
+  display: flex; }
   @media screen and (max-width: 768px) {
     .section {
-      min-height: initial;
       height: 100vh; } }
 
 .logo {
