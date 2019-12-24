@@ -491,6 +491,34 @@
           </div>    
         </div>
       </section>
+      <section class="section how">
+        <div class="container">
+          <h2 class="title title--section--how">Как мы работаем</h2>
+          <div class="player">
+            <div class="player__wrapper">
+              <video class="player">
+                <source src="./video/ram.mp4" type="video/mp4">
+              </video>
+              <div class="player__splash"></div>
+            </div>
+          <div class="player__controls" id="controls">
+            <button class="player__start" id="playBtn"></button>
+            <div class="player__playback" id="timeline">
+              <div class="player__playback-button"></div>
+              <!-- <span class="player__progress"></span> -->
+            </div>
+            <div class="player__duration">
+              <span class="player__duration-completed" id="timer">0:00</span> 
+              <!-- <span class="player__duration-estimate">0:00</span> -->
+            </div>
+            <div class="player__volume">
+              <img src="/icons/volume.svg" alt="" class="player__volume-icon">
+              <input type="range" step="0.1" min="0" max="1" value="0" id="volume" />
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
       <section class="section team">
         <div class="team__section">
           <div class="title title--section--team">Команда</div>
@@ -751,6 +779,7 @@
       <svg class="hamburger-menu__close-icon"><use xlink:href="/sprite.svg#close"></use></svg></a>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
   <script type="text/javascript" src="./fullpage.js"></script>
   <!-- <script src="onepagescroll.js"></script> -->
   <script src="./main.js"></script>

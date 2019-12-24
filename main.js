@@ -215,3 +215,120 @@ var marks = [
 						createPlacemark(coords);
 				});
 		}
+
+//VideoHTML5API
+
+// получаем все элементы
+var videoEl = document.getElementsByTagName('video')[0],
+playBtn = document.getElementById('playBtn'),
+vidControls = document.getElementById('controls'),
+volumeControl = document.getElementById('volume'),
+timePicker = document.getElementById('timer');
+timeline = document.getElementsByClassName('player__playback')[0],
+timelineProgress = document.getElementsByClassName('player__progress')[0],
+drag = document.getElementsByClassName('player__playback-button')[0];
+
+
+// если браузер может воспроизводить видео удаляем класс
+videoEl.addEventListener('canplaythrough', function () {
+  onPlayerReady();
+
+vidControls.classList.remove('hidden');
+videoEl.volume = volumeControl.value;
+}, false);
+// запускам или останавливаем воспроизведение
+playBtn.addEventListener('click', function () {
+if (videoEl.paused) {
+    videoEl.play();
+} else {
+    videoEl.pause();
+}
+}, false);
+
+videoEl.addEventListener('play', function () {
+
+playBtn.classList.add('paused');
+}, false);
+
+videoEl.addEventListener('pause', function () {
+
+playBtn.classList.remove('paused');
+}, false);
+
+volumeControl.addEventListener('input', function () {
+
+videoEl.volume = volumeControl.value;
+}, false);
+
+videoEl.addEventListener('ended', function () {
+videoEl.currentTime = 0;
+}, false);
+
+videoEl.addEventListener('timeupdate', function () {
+timePicker.innerHTML = formatTime(videoEl.currentTime);
+}, false);
+
+const onPlayerReady = () => {
+  let interval;
+  let durationSec = videoEl.duration;
+
+  if (typeof interval !== "undefined") {
+    clearInterval(interval);
+  }
+
+  interval = setInterval(() => {
+    const completedSec = videoEl.currentTime;
+    const completedPercent = (completedSec / durationSec) * 100;
+
+    $(".player__playback-button").css({
+      left: `${completedPercent}%`
+    });
+  }, 1000);
+};
+
+const eventsInit = () => {
+  $(".player__playback").on("click", e => {
+    const bar = $(e.currentTarget);
+    const newButtonPosition = e.pageX - bar.offset().left;
+    const buttonPosPercent = (newButtonPosition / bar.width()) * 100;
+    const newPlayerTimeSec = (videoEl.duration / 100) * buttonPosPercent;
+
+    $(".player__playback-button").css({
+      left: `${buttonPosPercent}%`
+    });
+
+    videoEl.currentTime = newPlayerTimeSec;
+  });
+
+  $(".player__splash").on("click", e => {
+    videoEl.play();
+  });
+};
+
+// рассчет отображаемого времени
+function formatTime(time, hours) {
+  if (hours) {
+      var h = Math.floor(time / 3600);
+      time = time - h * 3600;
+                  
+      var m = Math.floor(time / 60);
+      var s = Math.floor(time % 60);
+                  
+      return h.lead0(2)  + ":" + m.lead0(2) + ":" + s.lead0(2);
+  } else {
+      var m = Math.floor(time / 60);
+      var s = Math.floor(time % 60);
+                  
+      return m.lead0(2) + ":" + s.lead0(2);
+  }
+}
+          
+Number.prototype.lead0 = function(n) {
+  var nz = "" + this;
+  while (nz.length < n) {
+      nz = "0" + nz;
+  }
+  return nz;
+};
+
+eventsInit();
