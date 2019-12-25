@@ -11,13 +11,17 @@
 }
 
 .player__splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("../img/bg/player-splash.jpg") center center / cover no-repeat;
+  background: url("") center center / cover no-repeat;
+  background-color: rgba($color: #626262, $alpha: 0.7);
   cursor: pointer;
 }
 
@@ -113,11 +117,17 @@
 .player__duration {
   color: #626262;
   font-weight: bold;
+  @include tablets {
+    display: none;
+  }
 }
 
 .player__volume {
   display: flex;
   align-items: center;
+  @include tablets {
+    display: none;
+  }
 }
 
 input[type=range] {

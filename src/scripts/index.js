@@ -246,12 +246,24 @@ if (videoEl.paused) {
 }, false);
 
 videoEl.addEventListener('play', function () {
+  $(".player__splash-icon").css({
+    display: 'none'
+  });
 
-playBtn.classList.add('paused');
+  $(".player__splash").css({
+    display: 'none'
+  });
+
+  playBtn.classList.add('paused');
 }, false);
 
 videoEl.addEventListener('pause', function () {
-
+  $(".player__splash-icon").css({
+    display: 'block'
+  });
+  $(".player__splash").css({
+    display: 'flex'
+  });
 playBtn.classList.remove('paused');
 }, false);
 

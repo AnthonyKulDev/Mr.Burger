@@ -249,6 +249,9 @@
 }
 
 .form-popup__content {
+  top: 83%;
+  left: 34%;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;

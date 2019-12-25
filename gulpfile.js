@@ -6,14 +6,14 @@ const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
-const px2rem = require('gulp-smile-px2rem');
+// const px2rem = require('gulp-smile-px2rem');
 const gcmq = require('gulp-group-css-media-queries');
 const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
-const svgo = require('gulp-svgo');
-const svgSprite = require('gulp-svg-sprite');
+// const svgo = require('gulp-svgo');
+// const svgSprite = require('gulp-svg-sprite');
 const gulpif = require('gulp-if');
  
 const env = process.env.NODE_ENV;
@@ -39,7 +39,7 @@ task('styles', () => {
    .pipe(concat('main.min.scss'))
    .pipe(sassGlob())
    .pipe(sass().on('error', sass.logError))
-   .pipe(px2rem())
+  //  .pipe(px2rem())
    .pipe(gulpif(env === 'prod', autoprefixer({
        browsers: ['last 2 versions'],
        cascade: false
@@ -69,26 +69,26 @@ task('scripts', () => {
    .pipe(reload({ stream: true }));
 });
  
-task('icons', () => {
- return src('src/images/icons/*.svg')
-   .pipe(svgo({
-     plugins: [
-       {
-         removeAttrs: {
-           attrs: '(fill|stroke|style|width|height|data.*)'
-         }
-       }
-     ]
-   }))
-   .pipe(svgSprite({
-     mode: {
-       symbol: {
-         sprite: '../sprite.svg'
-       }
-     }
-   }))
-   .pipe(dest(`${DIST_PATH}/images/icons`));
-});
+// task('icons', () => {
+//  return src('src/images/icons/*.svg')
+//    .pipe(svgo({
+//      plugins: [
+//        {
+//          removeAttrs: {
+//            attrs: '(fill|stroke|style|width|height|data.*)'
+//          }
+//        }
+//      ]
+//    }))
+//    .pipe(svgSprite({
+//      mode: {
+//        symbol: {
+//          sprite: '../sprite.svg'
+//        }
+//      }
+//    }))
+//    .pipe(dest(`${DIST_PATH}/images/icons`));
+// });
  
 task('server', () => {
  browserSync.init({
@@ -103,14 +103,14 @@ task('watch', () => {
  watch('./src/styles/**/*.scss', series('styles'));
  watch('./src/*.html', series('copy:html'));
  watch('./src/scripts/*.js', series('scripts'));
- watch('./src/images/icons/*.svg', series('icons'));
+//  watch('./src/images/icons/*.svg', series('icons'));
 });
  
  
 task('default',
  series(
    'clean',
-   parallel('copy:html', 'styles', 'scripts', 'icons'),
+   parallel('copy:html', 'styles', 'scripts'),
    parallel('watch', 'server')
  )
 );
@@ -118,5 +118,5 @@ task('default',
 task('build',
  series(
    'clean',
-   parallel('copy:html', 'styles', 'scripts', 'icons'))
+   parallel('copy:html', 'styles', 'scripts'))
 );
