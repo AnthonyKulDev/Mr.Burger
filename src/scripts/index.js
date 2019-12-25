@@ -1,6 +1,6 @@
 //Hamburger-menu
 const hamburgerMenuLink = document.querySelector('.hamburger-menu-link');
-const hamburgerMenuItem = getElementsByClassName('nav__link');
+const hamburgerMenuItem = document.getElementsByClassName('nav__link');
 const hamburgerMenu = document.querySelector('#hamburger-menu');
 const closeButton = document.querySelector('.hamburger-menu__close');
 
