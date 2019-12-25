@@ -1,10 +1,16 @@
 //Hamburger-menu
 const hamburgerMenuLink = document.querySelector('.hamburger-menu-link');
+const hamburgerMenuItem = document.querySelector('.nav__item');
 const hamburgerMenu = document.querySelector('#hamburger-menu');
 const closeButton = document.querySelector('.hamburger-menu__close');
 
 hamburgerMenuLink.addEventListener('click', function () {
   hamburgerMenu.classList.add('hamburger-menu_visible');
+});
+hamburgerMenuItem.addEventListener('click', function () {
+  setTimeout(function () {
+    hamburgerMenu.classList.remove('hamburger-menu_visible');     
+  }, 30);
 });
 closeButton.addEventListener('click', function() {
   setTimeout(function () {
@@ -155,7 +161,7 @@ new fullpage('#fullpage', {
 	autoScrolling:true,
 	navigation: true,
 	scrollHorizontally: true,
-	anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninth']
+	anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninthPage']
 });
 
 //Map
