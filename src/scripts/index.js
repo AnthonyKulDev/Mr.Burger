@@ -154,8 +154,8 @@ new fullpage('#fullpage', {
 	//options here
 	autoScrolling:true,
 	navigation: true,
-	scrollHorizontally: true
-	
+	scrollHorizontally: true,
+	anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage']
 });
 
 //Map
