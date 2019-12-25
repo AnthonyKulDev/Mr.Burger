@@ -7,11 +7,13 @@ const closeButton = document.querySelector('.hamburger-menu__close');
 hamburgerMenuLink.addEventListener('click', function () {
   hamburgerMenu.classList.add('hamburger-menu_visible');
 });
-hamburgerMenuItem.addEventListener('click', function () {
-  setTimeout(function () {
-    hamburgerMenu.classList.remove('hamburger-menu_visible');     
-  }, 30);
+
+hamburgerMenuItem.forEach(function(element) {
+  element.addEventListener("click", function() {
+    hamburgerMenu.classList.remove('hamburger-menu_visible'); 
+  });
 });
+
 closeButton.addEventListener('click', function() {
   setTimeout(function () {
     hamburgerMenu.classList.remove('hamburger-menu_visible');     
