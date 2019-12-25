@@ -250,7 +250,6 @@
 
 .form-popup__content {
   top: 83%;
-  left: 34%;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -260,7 +259,7 @@
   max-width: rem(200px);
   padding: rem(20px);
   color: black;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .form-popup__text {

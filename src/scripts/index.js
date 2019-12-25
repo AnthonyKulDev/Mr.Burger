@@ -155,7 +155,7 @@ new fullpage('#fullpage', {
 	autoScrolling:true,
 	navigation: true,
 	scrollHorizontally: true,
-	anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage']
+	anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninth']
 });
 
 //Map
@@ -200,7 +200,7 @@ var marks = [
 								// Необходимо указать данный тип макета.
 								iconLayout: 'default#image',
 								// Своё изображение иконки метки.
-								iconImageHref: './icons/map-marker.svg',
+								iconImageHref: '../images/icons/map-marker.svg',
 								// Размеры метки.
 								iconImageSize: [46, 57],
 								// Смещение левого верхнего угла иконки относительно
